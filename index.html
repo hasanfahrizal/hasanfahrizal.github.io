@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,27 +50,24 @@
     <h1>Hasan Fahrizal</h1>
     <p class="lead">Web Developer</p>
     <p><i class="fa-solid fa-location-dot"></i> Magelang, Indonesia</p>
+    <p class="small">Available for freelance & full-time opportunities</p>
 
-    <!-- CTA -->
-    <a href="#contact" class="btn btn-light mt-3">Hubungi Saya</a>
+    <a href="#contact" class="btn btn-light mt-3">Contact Me</a>
   </div>
 </section>
 
 <!-- About -->
 <section id="about">
   <div class="container text-center">
-    <h2 class="mb-4">About</h2>
+    <h2 class="mb-4">About Me</h2>
     <div class="row justify-content-center">
       <div class="col-md-8">
         <p>
-          <p>
 I am a web developer with a strong interest in building web-based information systems. I focus on developing applications that improve efficiency, data accuracy, and simplify monitoring and management processes.
 
 In my development process, I prioritize clean and maintainable code, along with user-friendly and functional interfaces. I continuously learn and improve my skills in modern web technologies to keep up with the rapidly evolving digital landscape.
 
 I am able to work both independently and as part of a team, and I approach problem-solving in a logical and structured way. With a strong commitment to quality and continuous improvement, I am ready to contribute effectively to any project I work on.
-</p>
-
         </p>
       </div>
     </div>
@@ -80,14 +77,14 @@ I am able to work both independently and as part of a team, and I approach probl
 <!-- Projects -->
 <section id="projects" style="background-color:#f8f9fa;">
   <div class="container">
-    <h2 class="text-center mb-5">Proyek</h2>
-    <div class="row">
+    <h2 class="text-center mb-5">Projects</h2>
+    <div class="row justify-content-center">
       <div class="col-md-4">
         <div class="card">
           <img src="img/login.png" class="card-img-top" alt="project">
           <div class="card-body">
-            <h5 class="card-title">Sistem Pemeliharaan RS</h5>
-            <p class="card-text">Aplikasi untuk monitoring dan manajemen pemeliharaan fasilitas rumah sakit.</p>
+            <h5 class="card-title">Hospital Maintenance System</h5>
+            <p class="card-text">A web-based system for monitoring and managing hospital facility maintenance efficiently.</p>
           </div>
         </div>
       </div>
@@ -103,23 +100,22 @@ I am able to work both independently and as part of a team, and I approach probl
       <div class="col-md-6">
         <form>
           <div class="mb-3">
-            <input type="text" id="name" class="form-control" placeholder="Nama" required>
+            <input type="text" id="name" class="form-control" placeholder="Name" required>
           </div>
           <div class="mb-3">
             <input type="email" id="email" class="form-control" placeholder="Email" required>
           </div>
           <div class="mb-3">
-            <textarea id="message" class="form-control" rows="3" placeholder="Pesan" required></textarea>
+            <textarea id="message" class="form-control" rows="3" placeholder="Message" required></textarea>
           </div>
 
           <div class="d-grid gap-2">
-            <button type="button" onclick="sendEmail()" class="btn btn-primary">Kirim ke Email</button>
-            <button type="button" onclick="sendWhatsApp()" class="btn btn-success">Kirim ke WhatsApp</button>
+            <button type="button" onclick="sendEmail()" class="btn btn-primary">Send Email</button>
+            <button type="button" onclick="sendWhatsApp()" class="btn btn-success">Send WhatsApp</button>
           </div>
 
-          <!-- Notif -->
           <div id="successMsg" class="alert alert-success mt-3 d-none">
-            Pesan siap dikirim 👍
+            Message ready to send 👍
           </div>
 
         </form>
@@ -130,7 +126,7 @@ I am able to work both independently and as part of a team, and I approach probl
 
 <!-- Footer -->
 <footer>
-  <p>© 2026 HF | Dibuat dengan <i class="bi bi-heart-fill text-danger"></i></p>
+  <p>© 2026 Hasan Fahrizal | Built with <i class="bi bi-heart-fill text-danger"></i></p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -138,7 +134,7 @@ I am able to work both independently and as part of a team, and I approach probl
 <script>
 function validateForm(name, email, message) {
   if (!name || !email || !message) {
-    alert("Harap isi semua field!");
+    alert("Please fill in all fields!");
     return false;
   }
   return true;
@@ -155,8 +151,8 @@ function sendEmail() {
 
   if (!validateForm(name, email, message)) return;
 
-  const subject = `Pesan dari ${name}`;
-  const body = `Nama: ${name}%0AEmail: ${email}%0A%0APesan:%0A${message}`;
+  const subject = `Message from ${name}`;
+  const body = `Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
 
   showSuccess();
   window.location.href = `mailto:fahrizalhasan628@gmail.com?subject=${subject}&body=${body}`;
@@ -169,7 +165,7 @@ function sendWhatsApp() {
 
   if (!validateForm(name, email, message)) return;
 
-  const text = `Halo Hasan, saya ${name}.%0A%0AEmail: ${email}%0A%0APesan:%0A${message}`;
+  const text = `Hello Hasan, my name is ${name}.%0A%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
 
   showSuccess();
   window.open(`https://wa.me/6287812506534?text=${text}`, '_blank');
